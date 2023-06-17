@@ -25,7 +25,9 @@
             </nav>
             <div class="header-text">
                 <!-- <p>UI/UX Designer</p> -->
-                <h1>Hi, I'm <span>Guddu</span><br>from India</h1>
+                <h1>Hi, I'm <span>Guddu</span><br>from India  </h1>
+                <h1> I am a passionate <span id="element"></span></h1>
+             <h1 id="ele"></span></h1>
             </div>
         </div>
     </div>
@@ -226,5 +228,18 @@
             .catch(error => console.error('Error!', error.message))
         })
       </script>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+ <!-- Setup and start animation! -->
+ <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Java Programmer', 'Automation Engineer'],
+      typeSpeed: 50,
+      smartBackspace: true,
+      loop: true,
+      loopCount: Infinity,
+    });
+  </script>
 </body>
 </html>
