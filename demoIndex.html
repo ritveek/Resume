@@ -2,47 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guddu's Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style2.css">
-<script src="https://kit.fontawesome.com/56afad56a3.js" crossorigin="anonymous"></script>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/56afad56a3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="left">Guddu's Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact Me</a></li>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/gudlogo1.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <!-- <p>UI/UX Designer</p> -->
+                <h1>Hi, I'm <span>Guddu</span><br>from India  </h1>
+                <h1> I am a passionate <span id="element"></span></h1>
+             <h1 id="ele"></span></h1>
             </div>
-        </nav>
-    </header>
-    <main>
-       <section class="firstsection">
-        <div class="leftsection">
-           Hi, I am <span class="intro-clr">Guddu</span> 
-           <div style="width: max-content;">and I am a Passionate </div>
-           <div class="intro-clr"><span id="element" class="intro-clr"></span></div>
-
         </div>
-        <div class="rightsection">
-           <img src="images/try2.png" >
-        </div>
-       </section>
+        <!-- ------imgbox--- -->
+    <div class="box">
 
-
-
-
-       <section class="secondsection">      
-<!-- ---------------------------------------About------------------------------- -->
+        <div class="imgbox"> right </div>
+ 
+  </div>
+    </div>
+    
+<!-- -----------About--------- -->
     <div id="about">
         <div class="container">
             <div class="row">
@@ -91,9 +87,8 @@
             </div>
         </div>
     </div>
-       </section>
-       <section class="thirdsection">
-        <!-- --------------------------------SERVICES------------------------ -->
+
+    <!-- ---------------SERVICES-------- -->
     <div id="services">
         <div id="container">
             <h1 class="sub-title">My Services</h1>
@@ -129,7 +124,7 @@
             </div>
         </div>
     </div>
-    <!-- ----------------------------Portfolio---------------------------- -->
+    <!-- -------------Portfolio--------------- -->
     <div id="portfolio">
         <div class="container">
             <h1 class="sub-title">My Work</h1>
@@ -165,7 +160,7 @@
             <a href="#" class="btn">See more</a>
         </div>
     </div>
-    <!-- -------------------------------------------Contact--------------------------------- -->
+    <!-- --------------Contact----------- -->
     <div id="contact">
         <div class="container">
             <div class="row">
@@ -240,15 +235,10 @@
             .catch(error => console.error('Error!', error.message))
         })
       </script>
-       </section>
 
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
-    </main>
-
-
-
-     <!-- Setup and start animation! -->
-     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+ <!-- Setup and start animation! -->
  <script>
     var typed = new Typed('#element', {
       strings: ['Web Developer', 'Java Programmer', 'Automation Engineer'],
