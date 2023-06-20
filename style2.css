@@ -344,7 +344,9 @@ form .btn2{
 }
 
 /* -------------Css for small screen/Responsive------- */
-
+#logo{
+    display: none;
+}
 nav .fa-solid{
     display: none;
 }
@@ -352,9 +354,7 @@ nav .fa-solid{
 
 @media screen and (max-width:800px){
 
-body{
-    background-color: aqua;
-}
+
 .firstsection{
     flex-direction: column-reverse;
 }
@@ -362,8 +362,10 @@ nav{
     flex-direction: column;
     display: none;
 }
+
+
 .leftsection{
-    width: 100%;
+    width: 100% !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
