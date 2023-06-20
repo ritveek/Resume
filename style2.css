@@ -2,9 +2,8 @@
     margin: 0;
     padding: 0;
 }
-.container{
-    padding: 10px 10%;/* 10px from top and 10% from left /and right */
-   
+html{
+    scroll-behavior: smooth;
 }
 body{
     background: black;
@@ -12,11 +11,16 @@ body{
     color: whitesmoke;
 }
 nav{
-    background-color: aquamarine;
+    background-color: rgb(215, 96, 50);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 40px;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    margin: -82px 0px;
+    z-index: 1;
+
 }
 nav ul{
     display: flex;
@@ -24,12 +28,20 @@ nav ul{
 }
 nav ul li{
     list-style: none;
-    color: blueviolet;
+    /* color: white; */
     margin: 0 20px;
+
+    display: inline-block;
+}
+nav ul li a{
+    text-decoration:none;
+    position: relative;
+
+    color: white;
 }
 .left{
     font-size: 1.5rem;
-    color: red;
+    color: rgb(184, 235, 238);
 }
 .firstsection{
     display: flex;
@@ -38,15 +50,15 @@ nav ul li{
     margin: 80px 0;
 }
 .firstsection > div{
-    width: 28%;
+    width: 31%;
 }
 .leftsection{
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin: 50px 0;
    
 }
 .rightsection img{
-    width: 140%;
+    width: 130%;
     position: relative;
     right: 105px;  
 }
@@ -54,11 +66,42 @@ nav ul li{
     color: red;
     width: max-content;
 }
+/* -----------------------##########--------------- */
+.container{
+    padding: 10px 10%;/* 10px from top and 10% from left /and right */
+   
+}
+nav ul li a:hover{
+     color: rgb(155, 234, 171); 
+   
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height:3.5px;
+    background: rgba(155, 227, 235, 0.925);;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.5s;
+    
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+main hr{
+    border: 0;
+    background: red;
+    height: 1.2px;
+    margin: 170px 80px;
+  }
+
 
 /* --------------------------------------about------------------------------ */
 #about{
     padding: 20px ;
     color: #ffff;
+    margin: -105px 0;
 }
 .row{
     display: flex;
@@ -121,7 +164,7 @@ nav ul li{
 }
 /* ----------------------------------services--------------------- */
 #services{
-    padding: 20px 130px ;
+    padding: 85px 130px;
 }
 .services-list{
 display: grid;
@@ -159,7 +202,7 @@ margin-top: 50px;
 }
 /* !-- ------------------------------Portfolio------------------------- --> */
 #portfolio{
-    padding: 50px 0;
+    padding: 40px 0;
 }
 .work-list{
     display: grid;
@@ -191,7 +234,7 @@ margin-top: 50px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 0px;
     text-align: center;
     transition: 0.5s;
 }
@@ -301,6 +344,123 @@ form .btn2{
 }
 
 /* -------------Css for small screen/Responsive------- */
+
 nav .fa-solid{
     display: none;
+}
+
+
+@media screen and (max-width:800px){
+
+body{
+    background-color: aqua;
+}
+.firstsection{
+    flex-direction: column-reverse;
+}
+nav{
+    flex-direction: column;
+    display: none;
+}
+.leftsection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+}
+.rightsection{
+    width: 220px !important;
+    justify-content: center;
+    display: flex;
+}
+.rightsection img{
+    width: 165%;
+    position: relative;
+    right: 0px;
+}
+#frnt-text{
+    /* width: 100%; */
+}
+main hr{
+    margin: 100px 40px;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+    #header{
+        margin-top: -350px;
+        background-color: black;
+        background-image: none;
+        background-image: url(images/b3.jpeg);
+    }
+    .header-text{
+        margin-top:120%;
+        font-size: 25px;
+        margin-left: -10px;
+        
+    }
+    .header-text h1{
+        font-size: 33px;
+        margin-left: 20px;
+        margin-top: 16px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size:25px ;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width:200px ;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1,.about-col-2{
+        flex-basis: 100%;
+        margin-top: 10px;
+    }
+    .about-col-1{
+        margin-bottom: 20px;
+
+    }
+    .about-col-2{
+        font-size: 16px;
+        margin: -12px;
+    }
+    .tab-links{
+        font-size: 18px;
+        margin-right: 20px;
+    }
+    .contact-left,.contact-right{
+        flex-basis: 90%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+    #services{
+        padding: 80px 40px ;
+        margin-top: 29px;
+         /* margin-left: -80px;  */
+    }
+   
 }
