@@ -344,13 +344,9 @@ form .btn2{
 }
 
 /* -------------Css for small screen/Responsive------- */
-#logo{
-    display: none;
-}
 nav .fa-solid{
     display: none;
 }
-
 
 @media screen and (max-width:800px){
 
@@ -359,8 +355,11 @@ nav .fa-solid{
     flex-direction: column-reverse;
 }
 nav{
-    flex-direction: column;
-    display: none;
+    /* flex-direction: column; */
+    background: black;
+    background-color: #262626;
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -391,7 +390,7 @@ main hr{
 }
 
 /* --------------------------------------------------------------------------------- */
-
+/* 
     #header{
         margin-top: -350px;
         background-color: black;
@@ -408,7 +407,7 @@ main hr{
         font-size: 33px;
         margin-left: 20px;
         margin-top: 16px;
-    }
+    } */
     nav .fa-solid{
         display: block;
         font-size:25px ;
@@ -423,10 +422,12 @@ main hr{
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
+        display: block;
     }
     nav ul li{
         display: block;
         margin: 25px;
+        
     }
     nav ul .fa-solid{
         position: absolute;
