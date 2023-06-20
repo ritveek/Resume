@@ -393,24 +393,6 @@ main hr{
 }
 
 /* --------------------------------------------------------------------------------- */
-/* 
-    #header{
-        margin-top: -350px;
-        background-color: black;
-        background-image: none;
-        background-image: url(images/b3.jpeg);
-    }
-    .header-text{
-        margin-top:120%;
-        font-size: 25px;
-        margin-left: -10px;
-        
-    }
-    .header-text h1{
-        font-size: 33px;
-        margin-left: 20px;
-        margin-top: 16px;
-    } */
     nav .fa-solid{
         display: block;
         font-size:25px ;
